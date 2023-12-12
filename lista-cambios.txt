@@ -1,0 +1,6 @@
+* Lista de Tareas:
+  - Cambiar idioma todo lo que se pueda.
+  - Añadir login.
+  - Añadir modificar usuario.
+  - Registrar usuario.
+  - Cambiar API por informacion en el sistema.
