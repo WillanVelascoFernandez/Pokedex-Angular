@@ -6,10 +6,10 @@
             <h2 class="card-subtitulo">{{pokemon?.detalhes?.types[0]?.type?.name}}</h2>
         </mat-card-header>
 
-        <img src={{pokemon?.detalhes?.sprites?.front_shiny}} alt="Imagem Pokémon Pixelizada">
+        <img src={{pokemon?.detalhes?.sprites?.front_shiny}} alt="Imagen Pokémon Pixeleada">
 
         <button class="card-botao" (click)="MostrarPokemon()" (click)="ref.play()">
-            Mais informações
+            Mas información
         </button>
 
         <audio #ref src="assets/sound-effect.mp3"></audio>
