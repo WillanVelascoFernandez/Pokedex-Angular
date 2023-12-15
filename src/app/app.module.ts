@@ -17,31 +17,32 @@ import { ButtonPokemonComponent } from './views/body/button-pokemon/button-pokem
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipeService } from './services/pipe.service';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        PokemonListComponent,
-        CardsComponent,
-        FooterComponent,
-        HeaderComponent,
-        ButtonPokemonComponent,
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatTabsModule,
-        MatCardModule,
-        HttpClientModule,
-        MatDialogModule,
-        InfiniteScrollModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
-    providers: [PokemonService, PipeService],
-    bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    PokemonListComponent,
+    CardsComponent,
+    FooterComponent,
+    HeaderComponent,
+    ButtonPokemonComponent,
+    LoginComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatCardModule,
+    HttpClientModule,
+    MatDialogModule,
+    InfiniteScrollModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [PokemonService, PipeService],
+  bootstrap: [AppComponent, LoginComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
