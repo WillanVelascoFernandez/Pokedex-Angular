@@ -26,7 +26,6 @@ export class RegistroComponent implements OnInit {
       .then((response) => {
         console.log(response);
         this.router.navigate(['/login']);
-        alert()
       })
       .catch((error) => {
         console.log(error);
