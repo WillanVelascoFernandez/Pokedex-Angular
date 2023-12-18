@@ -19,6 +19,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipeService } from './services/pipe.service';
 import { LoginComponent } from './views/login/login.component';
 import { RegistroComponent } from './views/registro/registro.component';
+import { UsuarioService } from './services/usuario.service';
+// import { AngularFireModule } from '@angular/fire/compat'
+// import { AngularFireAuthModule } from '@angular/fire/compat/auth'
+import { environment } from './environments/environment';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -34,6 +40,10 @@ import { RegistroComponent } from './views/registro/registro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAuthModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTabsModule,
@@ -45,7 +55,7 @@ import { RegistroComponent } from './views/registro/registro.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [PokemonService, PipeService],
+  providers: [PokemonService, PipeService, UsuarioService],
   bootstrap: [AppComponent, LoginComponent],
 })
 export class AppModule {}

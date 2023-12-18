@@ -1,26 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SHA256 } from 'crypto-js';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css'],
 })
-export class RegistroComponent {
-  username: string = '';
-  password: string = '';
-  confirm_password: string = '';
+export class RegistroComponent implements OnInit {
+  formReg: FormGroup;
 
-  constructor(private router: Router) {}
+  constructor(private usuarioService: UsuarioService, private router: Router) {
+    this.formReg = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl(),
+    });
+  }
+
+  ngOnInit(): void {}
 
   onSubmit() {
-    const encryptedPassword = SHA256(this.password).toString();
-    const hashedPassword = SHA256('1234').toString();
-    if (this.username === 'willan' && encryptedPassword === hashedPassword) {
-      this.router.navigate(['/lista']);
-    } else {
-      this.router.navigate(['/login']);
-    }
+    this.usuarioService
+      .register(this.formReg.value)
+      .then((response) => {
+        console.log(response);
+        this.router.navigate(['/login']);
+      })
+      .catch((error) => console.log(error));
   }
 }
