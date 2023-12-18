@@ -26,7 +26,11 @@ export class RegistroComponent implements OnInit {
       .then((response) => {
         console.log(response);
         this.router.navigate(['/login']);
+        alert()
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        alert("Introduzca un correo valido y contraseña de almenos 6 caracteres");
+      });
   }
 }

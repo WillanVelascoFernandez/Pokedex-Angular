@@ -28,7 +28,10 @@ export class LoginComponent implements OnInit {
         console.log(response);
         this.router.navigate(['/lista']);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        alert('Correo o contraseña incorrecta');
+      });
   }
 
   onClick() {
