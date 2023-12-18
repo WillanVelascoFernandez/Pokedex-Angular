@@ -3,15 +3,14 @@ import { Router } from '@angular/router';
 import { SHA256 } from 'crypto-js';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css'],
 })
-
-
-export class LoginComponent {
+export class RegistroComponent {
   username: string = '';
   password: string = '';
+  confirm_password: string = '';
 
   constructor(private router: Router) {}
 
@@ -23,6 +22,5 @@ export class LoginComponent {
     } else {
       this.router.navigate(['/login']);
     }
-
   }
 }

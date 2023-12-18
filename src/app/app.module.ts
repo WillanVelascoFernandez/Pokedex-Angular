@@ -18,6 +18,7 @@ import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipeService } from './services/pipe.service';
 import { LoginComponent } from './views/login/login.component';
+import { RegistroComponent } from './views/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginComponent } from './views/login/login.component';
     HeaderComponent,
     ButtonPokemonComponent,
     LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { LoginComponent } from './views/login/login.component';
     InfiniteScrollModule,
     FormsModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [PokemonService, PipeService],
   bootstrap: [AppComponent, LoginComponent],
