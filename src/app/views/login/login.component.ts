@@ -7,10 +7,8 @@ import { SHA256 } from 'crypto-js';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-
-
 export class LoginComponent {
-  username: string = '';
+  email: string = '';
   password: string = '';
 
   constructor(private router: Router) {}
@@ -18,11 +16,10 @@ export class LoginComponent {
   onSubmit() {
     const encryptedPassword = SHA256(this.password).toString();
     const hashedPassword = SHA256('1234').toString();
-    if (this.username === 'willan' && encryptedPassword === hashedPassword) {
+    if (this.email === 'willan' && encryptedPassword === hashedPassword) {
       this.router.navigate(['/lista']);
     } else {
       this.router.navigate(['/login']);
     }
-
   }
 }
