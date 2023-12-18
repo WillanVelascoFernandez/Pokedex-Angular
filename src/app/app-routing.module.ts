@@ -4,9 +4,15 @@ import { PokemonListComponent } from './views/body/pokemon-list/pokemon-list.com
 import { LoginComponent } from './views/login/login.component';
 import { RegistroComponent } from './views/registro/registro.component';
 import { FormsModule } from '@angular/forms';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
 
 const routes: Routes = [
-  { path: 'lista', component: PokemonListComponent },
+  {
+    path: 'lista',
+    component: PokemonListComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
+  },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
