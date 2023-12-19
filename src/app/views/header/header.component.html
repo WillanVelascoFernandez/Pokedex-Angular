@@ -9,7 +9,12 @@
     <div class="cabecalho-pesquisa">
         <input type="search" placeholder="Buscar" name="search" [(ngModel)]="searchValue" (ngModelChange)="onFilterClick()">
         <button class="botao-pesquisa" type="submit" (click)="onFilterClick()"></button>
-        <button (click)="onClick()" class="btn btn-outline-danger mt-5">Cerrar Sesión</button>
+
+
+          <button (click)="onClick()" class="login100-form-btn">
+            Cerrar Sesión
+          </button>
+
     </div>
 
 </mat-toolbar>
