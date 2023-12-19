@@ -25,6 +25,8 @@ import { UsuarioService } from './services/usuario.service';
 import { environment } from './environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
+import { RecuperarPasswordComponent } from './views/recuperar-password/recuperar-password.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
     ButtonPokemonComponent,
     LoginComponent,
     RegistroComponent,
+    RecuperarPasswordComponent,
   ],
   imports: [
     BrowserModule,

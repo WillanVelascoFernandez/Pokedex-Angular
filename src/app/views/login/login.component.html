@@ -34,6 +34,14 @@
             Contraseña
           </span>
         </div>
+        <div class="text-right p-t-30">
+
+
+        <a routerLink="/recuperar" class="txt2 bo1">
+          ¿Contraseña olvidada?
+        </a>
+        </div>
+
         <div class="wrap-input100 validate-input" data-validate = "Password is required">
           <input class="input100" type="password" formControlName="password" required>
           <span class="focus-input100"></span>
@@ -48,7 +56,7 @@
           </button>
         </div>
 
-        <div class="w-full text-center p-t-55">
+        <div class="w-full text-center p-t-30 p-b-10">
           <span class="txt2">
             No tienes usuario?
           </span>
@@ -56,9 +64,10 @@
           <a routerLink="/registro" class="txt2 bo1">
             Registrarse ahora
           </a>
-        </div>
+          </div>
+
       </form>
-     <button class="btn-google m-b-20" (click)="onClick()"><img src="/assets/img/login/icons/icon-google.png" alt="GOOGLE">
+     <button class="w-full btn-google m-b-20" (click)="onClick()"><img src="/assets/img/login/icons/icon-google.png" alt="GOOGLE">
           Google</button>
     </div>
   </div>
