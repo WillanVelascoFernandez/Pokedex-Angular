@@ -26,6 +26,7 @@ import { environment } from './environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { RecuperarPasswordComponent } from './views/recuperar-password/recuperar-password.component';
+import { MensajeRecuperarPasswordComponent } from './views/mensaje-recuperar-password/mensaje-recuperar-password.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { RecuperarPasswordComponent } from './views/recuperar-password/recuperar
     LoginComponent,
     RegistroComponent,
     RecuperarPasswordComponent,
+    MensajeRecuperarPasswordComponent,
   ],
   imports: [
     BrowserModule,

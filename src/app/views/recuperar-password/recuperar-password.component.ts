@@ -25,8 +25,8 @@ export class RecuperarPasswordComponent implements OnInit {
       .forgotPassword(this.formRecuperar.value)
       .then((response) => {
         console.log(response);
-        alert('Revise su bandeja de entrada de su correo');
-        this.router.navigate(['/login']);
+        // alert('Revise su bandeja de entrada de su correo');
+        this.router.navigate(['/mensaje_email']);
       })
       .catch((error) => {
         console.log(error);

@@ -6,6 +6,7 @@ import { RegistroComponent } from './views/registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { RecuperarPasswordComponent } from './views/recuperar-password/recuperar-password.component';
+import { MensajeRecuperarPasswordComponent } from './views/mensaje-recuperar-password/mensaje-recuperar-password.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'recuperar', component: RecuperarPasswordComponent },
+  { path: 'mensaje_email', component: MensajeRecuperarPasswordComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
